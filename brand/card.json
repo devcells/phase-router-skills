@@ -1,0 +1,37 @@
+{
+  "name": "Phase Router",
+  "tagline": "One OpenAI-compatible API for every model: price of each call in the answer, signed receipt for each call.",
+  "description_short": "OpenAI-compatible model router: about 400 models behind one API key, pay per call by key or per request in USDT (x402), a signed receipt for every call.",
+  "description_long": "Phase Router is an OpenAI-compatible model router. One base URL and one API key give access to about 400 models: open LLMs (DeepSeek, Qwen, Llama, gpt-oss, Kimi, GLM, MiniMax and others), Claude models, and image, video, speech, embedding and rerank models. The model `auto` sends each request to the cheapest model that can do it well; any model can also be called by id. Every answer states the model that ran and its price (`usage.cost`), and every paid call has a signed receipt; receipts roll into weekly epochs anchored on the Phase L1 blockchain. Pay with a prepaid API key, per request in USDT on Phase L1 via x402 (no account), or bring your own provider key for closed models. It also speaks the Anthropic Messages API (Claude Code, Claude Agent SDK) and ships a remote MCP server for agents.",
+  "website": "https://router.phase.xyz",
+  "docs": "https://router.phase.xyz/docs",
+  "api_base_url": "https://router.phase.xyz/v1",
+  "models_url": "https://router.phase.xyz/models",
+  "models_api": "https://router.phase.xyz/v1/models",
+  "llms_txt": "https://router.phase.xyz/llms.txt",
+  "mcp": {
+    "endpoint": "https://mcp.ai.phase.xyz/mcp",
+    "transport": "streamable-http",
+    "auth": "API key (Authorization: Bearer phk_...); initialize and tools/list answer without a key",
+    "registry_name": "xyz.phase.ai/gateway",
+    "server_json": "https://router.phase.xyz/.well-known/mcp/server.json",
+    "tools": ["list_models", "quote", "chat", "embed", "receipt", "key", "session"]
+  },
+  "x402": {
+    "discovery": "https://router.phase.xyz/.well-known/x402",
+    "network": "eip155:1015",
+    "asset": "USDT (Bridged PHASE USDT)",
+    "scheme": "upto"
+  },
+  "repository": "https://github.com/devcells/phase-router-skills",
+  "logo_svg": "https://raw.githubusercontent.com/devcells/phase-router-skills/main/brand/logo.svg",
+  "logo_mono_svg": "https://raw.githubusercontent.com/devcells/phase-router-skills/main/brand/logo-mono.svg",
+  "logo_png_512": "https://raw.githubusercontent.com/devcells/phase-router-skills/main/brand/logo-512.png",
+  "og_image": "https://router.phase.xyz/og.png",
+  "brand_colors": { "background": "#00040f", "accent": "#4da3ff" },
+  "categories": ["AI gateway", "LLM router", "Model aggregator", "Developer tools", "Payments / x402"],
+  "tags": ["llm", "openai-compatible", "anthropic-compatible", "model-router", "ai-gateway", "mcp", "x402", "usdt", "pay-per-call", "receipts", "open-models", "embeddings", "image-generation"],
+  "pricing": "Pay per call: model token price plus a small fixed per-call fee; no subscription. Prices: https://router.phase.xyz/models",
+  "company": "Phase Labs Technologies Inc",
+  "contact": "ai@phase.xyz"
+}

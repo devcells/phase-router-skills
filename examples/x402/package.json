@@ -1,0 +1,8 @@
+{
+  "name": "phase-router-x402-example",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "viem": "^2.30.0"
+  }
+}

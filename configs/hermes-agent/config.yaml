@@ -1,0 +1,22 @@
+# ~/.hermes/config.yaml: Phase Router as the main model provider and as an MCP server.
+# Put the key in ~/.hermes/.env:  PHASE_API_KEY=phk_...
+model:
+  default: auto                     # or an id from https://router.phase.xyz/v1/models, e.g. qwen3-coder-480b
+  provider: custom
+  base_url: https://router.phase.xyz/v1
+  key_env: PHASE_API_KEY
+
+# Optional: keep Phase Router as a named provider next to others; switch with /model custom:phase-router:<model>
+providers:
+  phase-router:
+    api: https://router.phase.xyz/v1
+    key_env: PHASE_API_KEY
+    transport: chat_completions
+    default_model: auto
+
+# Optional: the Phase Router MCP server (list_models, quote, chat, embed, receipt, key, session)
+mcp_servers:
+  phase-router:
+    url: "https://mcp.ai.phase.xyz/mcp"
+    headers:
+      Authorization: "Bearer ${PHASE_API_KEY}"

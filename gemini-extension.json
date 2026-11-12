@@ -1,0 +1,20 @@
+{
+  "name": "phase-router",
+  "version": "0.5.1",
+  "description": "Phase Router: one OpenAI-compatible API for about 400 models, price of each call in the answer, signed receipts.",
+  "contextFileName": "GEMINI.md",
+  "mcpServers": {
+    "phase-router": {
+      "httpUrl": "https://mcp.ai.phase.xyz/mcp",
+      "headers": { "Authorization": "Bearer ${PHASE_API_KEY}" }
+    }
+  },
+  "settings": [
+    {
+      "name": "Phase API key",
+      "description": "Your Phase Router API key (phk_...), from https://router.phase.xyz/dashboard",
+      "envVar": "PHASE_API_KEY",
+      "sensitive": true
+    }
+  ]
+}

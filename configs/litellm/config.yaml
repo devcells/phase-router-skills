@@ -1,0 +1,37 @@
+# LiteLLM Proxy: Phase Router as one more provider. export PHASE_API_KEY=phk_...; litellm --config config.yaml
+# openai/<id> = OpenAI protocol to api_base; ids from https://router.phase.xyz/v1/models.
+# Prices: phase.input_per_m / output_per_m are micro-USD per 1M tokens; divide by 1e12 for LiteLLM's per-token cost.
+# Every answer also carries usage.cost (USD), the real charge including the per-call fee.
+model_list:
+  - model_name: phase-auto                 # the router picks the model
+    litellm_params:
+      model: openai/auto
+      api_base: https://router.phase.xyz/v1
+      api_key: os.environ/PHASE_API_KEY
+
+  - model_name: fast
+    litellm_params:
+      model: openai/gpt-oss-120b
+      api_base: https://router.phase.xyz/v1
+      api_key: os.environ/PHASE_API_KEY
+    model_info:
+      input_cost_per_token: 0.0000000385   # 38500 micro-USD per 1M
+      output_cost_per_token: 0.0000001768  # 176800 micro-USD per 1M
+
+  - model_name: coder
+    litellm_params:
+      model: openai/qwen3-coder-480b
+      api_base: https://router.phase.xyz/v1
+      api_key: os.environ/PHASE_API_KEY
+    model_info:
+      input_cost_per_token: 0.000000312
+      output_cost_per_token: 0.00000104
+
+  - model_name: embed
+    litellm_params:
+      model: openai/bge-m3
+      api_base: https://router.phase.xyz/v1
+      api_key: os.environ/PHASE_API_KEY
+    model_info:
+      mode: embedding
+      input_cost_per_token: 0.0000000104
