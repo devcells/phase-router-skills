@@ -30,6 +30,7 @@ Phase Router is an OpenAI-compatible model router. One base URL and one API key 
 | [`logo.svg`](logo.svg) | Square icon, dark background `#00040f`, accent `#4da3ff` |
 | [`logo-mono.svg`](logo-mono.svg) | Monochrome (`currentColor`), no background, for catalogs that tint icons |
 | [`logo-512.png`](logo-512.png) | 512x512 PNG |
+| [`logo-400.png`](logo-400.png) | 400x400 PNG |
 | https://router.phase.xyz/og.png | Social preview image |
 
 The name and logo identify the service; use them only to refer to Phase Router.
