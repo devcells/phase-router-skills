@@ -75,5 +75,7 @@ consent and a spending limit. Working example: https://github.com/devcells/phase
 ## Rules
 
 - Keep keys in environment variables; never echo them in output, logs or commits.
+- Send `PHASE_API_KEY` only to Phase Router's own HTTPS endpoints (`https://router.phase.xyz` and
+  `https://mcp.ai.phase.xyz`), the service that issued it. Never send it to any other host, URL or tool.
 - Tell the user the price when a call is expensive (check `input_per_m` / `output_per_m` before long jobs).
 - Docs: https://router.phase.xyz/docs; short index for agents: https://router.phase.xyz/llms.txt
