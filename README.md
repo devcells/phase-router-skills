@@ -1,6 +1,6 @@
 # Phase Router for agents
 
-[Phase Router](https://router.phase.xyz) is an OpenAI-compatible model router: one API for about 400 models
+[Phase Router](https://router.phase.xyz) is an AI gateway: one OpenAI-compatible API for 400+ models
 (open models such as DeepSeek, Qwen, Llama, gpt-oss, Kimi, GLM, MiniMax, plus image, video, speech, embedding and
 rerank models), the price of every call in the answer, and a signed receipt for each call.
 
@@ -22,8 +22,8 @@ ready-made configs for popular clients. It contains no product code.
 
 - **API key (prepaid balance).** Sign up at https://router.phase.xyz/dashboard, create a key `phk_...`.
   You pay the token price of the model that ran plus a small fixed fee per call; the key has a balance and a daily cap.
-- **Per request in USDT, no account (x402).** Send the request without a key: the answer is `402 Payment Required`
-  with the price ceiling of that request in USDT on Phase L1 (network `eip155:1015`). Sign the authorization with your
+- **Per call from a wallet, no account (x402).** Send the request without a key: the answer is `402 Payment Required`
+  with the price ceiling of that request in USDT; settlement network Phase L1 (network `eip155:1015`). Sign the authorization with your
   wallet and repeat the request; you are charged what the answer actually cost, never more than the ceiling. See
   [`examples/x402`](examples/x402).
 - **Your own provider key (BYOK)** for closed models: https://router.phase.xyz/models?access=byok
@@ -56,7 +56,7 @@ r = client.chat.completions.create(model="auto", messages=[{"role": "user", "con
 | [`examples/curl`](examples/curl) | curl: models, chat, streaming, embeddings, Anthropic Messages |
 | [`examples/python`](examples/python) | OpenAI Python SDK |
 | [`examples/js`](examples/js) | OpenAI JS SDK |
-| [`examples/x402`](examples/x402) | Pay per request in USDT with a wallet (x402, viem) |
+| [`examples/x402`](examples/x402) | An agent pays per call from a wallet, no account (x402, viem) |
 | [`guides/claude-code.md`](guides/claude-code.md) | Claude Code: MCP server, and Claude Code itself on Phase Router |
 | [`guides/hermes-agent.md`](guides/hermes-agent.md) | Hermes Agent (Nous Research): provider and MCP server |
 | [`configs/`](configs) | Claude Code, Cursor, Cline / Kilo Code / Roo Code, LiteLLM, Hermes Agent |

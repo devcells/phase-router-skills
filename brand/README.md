@@ -5,8 +5,8 @@ Use these texts and files when listing Phase Router in a catalog. Machine-readab
 | Field | Value |
 |---|---|
 | Name | Phase Router |
-| One line | One OpenAI-compatible API for every model: price of each call in the answer, signed receipt for each call. |
-| Short description | OpenAI-compatible model router: about 400 models behind one API key, pay per call by key or per request in USDT (x402), a signed receipt for every call. |
+| One line | AI gateway: one OpenAI-compatible API for 400+ models, the price of every call in the answer, a signed receipt for each. |
+| Short description | OpenAI-compatible AI gateway: 400+ models behind one API key, the price of every call in the answer, a signed receipt for each call; agents pay per call from a wallet with no account (x402). |
 | Website | https://router.phase.xyz |
 | Docs | https://router.phase.xyz/docs |
 | API base URL | `https://router.phase.xyz/v1` (OpenAI-compatible; Anthropic Messages at `/v1/messages`) |
@@ -21,7 +21,7 @@ Use these texts and files when listing Phase Router in a catalog. Machine-readab
 
 ## Long description
 
-Phase Router is an OpenAI-compatible model router. One base URL and one API key give access to about 400 models: open LLMs (DeepSeek, Qwen, Llama, gpt-oss, Kimi, GLM, MiniMax and others), Claude models, and image, video, speech, embedding and rerank models. The model `auto` sends each request to the cheapest model that can do it well; any model can also be called by id. Every answer states the model that ran and its price (`usage.cost`), and every paid call has a signed receipt; receipts roll into weekly epochs anchored on the Phase L1 blockchain. Pay with a prepaid API key, per request in USDT on Phase L1 via x402 (no account), or bring your own provider key for closed models. It also speaks the Anthropic Messages API (Claude Code, Claude Agent SDK) and ships a remote MCP server for agents.
+Phase Router is an AI gateway: an OpenAI-compatible API with an auto-router and signed receipts. One base URL and one API key give access to about 400 models: open LLMs (DeepSeek, Qwen, Llama, gpt-oss, Kimi, GLM, MiniMax and others), Claude models, and image, video, speech, embedding and rerank models. The model `auto` sends each request to the cheapest model that can do it well; any model can also be called by id. Every answer states the model that ran and its price (`usage.cost`), and every paid call has a signed receipt; receipts roll into weekly epochs whose roots are recorded on Phase L1, the Phase settlement network, so a receipt is final once written. Pay with a prepaid API key, let an agent pay per call from a wallet in USDT with no account (x402; settled on Phase L1 with no payment processor in between), or bring your own provider key for closed models. It also speaks the Anthropic Messages API (Claude Code, Claude Agent SDK) and ships a remote MCP server for agents.
 
 ## Logo
 
