@@ -1,6 +1,7 @@
-# Pay per request with x402 (USDT on Phase L1)
+# Pay per call from a wallet, no account (x402)
 
-No account and no API key: the wallet pays each call. Phase Router speaks x402 v2 with the `upto` scheme.
+No account and no API key: the wallet pays each call. Phase Router speaks x402 v2 with the `upto` scheme; payments settle
+in USDT on Phase L1, the Phase settlement network (`eip155:1015`).
 
 1. Send the request as usual, without `Authorization`. The answer is `402 Payment Required`; the JSON body (and the
    base64 `PAYMENT-REQUIRED` header) lists `accepts`: `scheme` `upto`, `network` `eip155:1015` (Phase L1), `asset`

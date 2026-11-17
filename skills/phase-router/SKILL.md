@@ -1,6 +1,6 @@
 ---
 name: phase-router
-description: Call LLMs and media models through Phase Router (router.phase.xyz), an OpenAI-compatible router with about 400 models, the price of each call in the answer and a signed receipt. Use when the user wants to call a model through Phase Router, pick the cheapest suitable model, compare model prices, embed text, generate images or speech, check a Phase API key's balance, or pay per request in USDT (x402) without an account.
+description: Call LLMs and media models through Phase Router (router.phase.xyz), an AI gateway with one OpenAI-compatible API for about 400 models, the price of each call in the answer and a signed receipt. Use when the user wants to call a model through Phase Router, pick the cheapest suitable model, compare model prices, embed text, generate images or speech, check a Phase API key's balance, or pay per call from a wallet in USDT without an account (x402).
 ---
 
 # Phase Router
@@ -64,10 +64,10 @@ Other endpoints with the same key: `/v1/embeddings`, `/v1/images/generations`, `
 | 429 `daily_cap_reached` | key's daily cap reached (resets 00:00 UTC) | wait or raise the cap |
 | 503 `overloaded` | retry later | back off and retry |
 
-## Pay per request without an account (x402)
+## Pay per call from a wallet, no account (x402)
 
-A request without `Authorization` gets `402` with `accepts[0]`: `scheme` (`upto`), `network` (`eip155:1015`, Phase
-L1), `amount` (price ceiling in micro-USDT), `asset`, `payTo`, `extra.taskId`, `extra.quote`. The client signs an
+A request without `Authorization` gets `402` with `accepts[0]`: `scheme` (`upto`), `network` (`eip155:1015`, the
+Phase L1 settlement network), `amount` (price ceiling in micro-USDT), `asset`, `payTo`, `extra.taskId`, `extra.quote`. The client signs an
 EIP-712 authorization (`ReceiveWithAuthorizationUpTo`, nonce = `extra.taskId`) and repeats the same request with the
 `PAYMENT-SIGNATURE` header; the charge is the actual cost, never above `amount`. Never sign without the user's
 consent and a spending limit. Working example: https://github.com/devcells/phase-router-skills/tree/main/examples/x402

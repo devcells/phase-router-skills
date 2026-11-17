@@ -1,7 +1,7 @@
 {
   "name": "phase-router",
   "version": "0.5.1",
-  "description": "Phase Router: one OpenAI-compatible API for about 400 models, price of each call in the answer, signed receipts.",
+  "description": "Phase Router: AI gateway with one OpenAI-compatible API for about 400 models, the price of each call in the answer, signed receipts.",
   "contextFileName": "GEMINI.md",
   "mcpServers": {
     "phase-router": {

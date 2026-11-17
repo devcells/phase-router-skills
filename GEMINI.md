@@ -1,6 +1,6 @@
 # Phase Router
 
-The `phase-router` MCP server gives you Phase Router, an OpenAI-compatible router for about 400 models:
+The `phase-router` MCP server gives you Phase Router, an AI gateway: one OpenAI-compatible API for about 400 models:
 
 - `list_models`: models with prices (micro-USD per 1M tokens) and capabilities.
 - `quote`: the price ceiling of a call before running it.
