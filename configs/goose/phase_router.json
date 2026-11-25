@@ -1,0 +1,58 @@
+{
+  "name": "phase_router",
+  "engine": "openai",
+  "display_name": "Phase Router",
+  "description": "OpenAI-compatible router for ~370 models with per-call cost and a signed receipt on every call; `auto` picks the cheapest model that can do the task",
+  "api_key_env": "PHASE_API_KEY",
+  "base_url": "https://router.phase.xyz/v1",
+  "catalog_provider_id": "phase",
+  "models": [
+    {
+      "name": "auto",
+      "context_limit": 262144
+    },
+    {
+      "name": "glm-5.3",
+      "context_limit": 1048576,
+      "input_token_cost": 9.36e-07,
+      "output_token_cost": 4.16e-06,
+      "currency": "USD"
+    },
+    {
+      "name": "kimi-k3.1-pro",
+      "context_limit": 1048576,
+      "input_token_cost": 2.11e-06,
+      "output_token_cost": 1.055e-05,
+      "currency": "USD"
+    },
+    {
+      "name": "deepseek-v4.1-flash",
+      "context_limit": 1048576,
+      "input_token_cost": 1.317e-07,
+      "output_token_cost": 5.486e-07,
+      "currency": "USD"
+    },
+    {
+      "name": "qwen3-coder-480b",
+      "context_limit": 262144,
+      "input_token_cost": 3.12e-07,
+      "output_token_cost": 1.04e-06,
+      "currency": "USD"
+    },
+    {
+      "name": "gpt-oss-120b",
+      "context_limit": 131072,
+      "input_token_cost": 3.85e-08,
+      "output_token_cost": 1.768e-07,
+      "currency": "USD"
+    }
+  ],
+  "dynamic_models": true,
+  "supports_streaming": true,
+  "requires_auth": true,
+  "model_doc_link": "https://router.phase.xyz/models",
+  "setup_steps": [
+    "Sign in at https://router.phase.xyz/dashboard and create an API key (phk_...)",
+    "Paste the key above as PHASE_API_KEY"
+  ]
+}

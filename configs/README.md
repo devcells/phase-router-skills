@@ -7,6 +7,7 @@
 | Cline, Kilo Code, Roo Code | [`cline-kilo-roo/`](cline-kilo-roo) | OpenAI Compatible provider |
 | LiteLLM Proxy | [`litellm/config.yaml`](litellm/config.yaml) | `litellm --config config.yaml` |
 | Hermes Agent | [`hermes-agent/config.yaml`](hermes-agent/config.yaml) | `~/.hermes/config.yaml`. Guide: [`../guides/hermes-agent.md`](../guides/hermes-agent.md) |
+| Goose | [`goose/phase_router.json`](goose/phase_router.json) | Custom provider: copy to `~/.config/goose/custom_providers/` (Windows: `%APPDATA%\Block\goose\config\custom_providers\`), set `PHASE_API_KEY`, then `goose session --provider phase_router` or pick **Phase Router** in goose Desktop. `auto` and five models are listed; the rest of the catalog loads from `/v1/models` |
 | Gemini CLI | [`../gemini-extension.json`](../gemini-extension.json) | `gemini extensions install https://github.com/devcells/phase-router-skills` |
 
 Keys never go into these files: they are read from `PHASE_API_KEY` in the environment (or the client's secret store),
