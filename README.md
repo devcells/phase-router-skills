@@ -66,6 +66,7 @@ r = client.chat.completions.create(model="auto", messages=[{"role": "user", "con
 | [`examples/python`](examples/python) | OpenAI Python SDK |
 | [`examples/js`](examples/js) | OpenAI JS SDK |
 | [`examples/x402`](examples/x402) | Pay per request in USDT with a wallet (x402, viem) |
+| [`guides/pay-with-your-wallet.md`](guides/pay-with-your-wallet.md) | Pay from your own wallet: sign in, top up with USDT on Phase L1, use your account's key |
 | [`guides/claude-code.md`](guides/claude-code.md) | Claude Code: MCP server, and Claude Code itself on Phase Router |
 | [`guides/hermes-agent.md`](guides/hermes-agent.md) | Hermes Agent (Nous Research): provider and MCP server |
 | [`configs/`](configs) | Claude Code, Cursor, Cline / Kilo Code / Roo Code, LiteLLM, Hermes Agent |
