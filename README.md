@@ -31,6 +31,15 @@ ready-made configs for popular clients. It contains no product code.
 Every answer carries `usage.cost` (USD) and a `phase` object with the model that ran and the task id of its receipt
 (`https://router.phase.xyz/receipts/<task_id>`).
 
+## Claude Code plugin
+
+```
+/plugin marketplace add devcells/phase-router-skills
+/plugin install phase-router@phase-router
+```
+
+Installs the `phase-router` skill and the remote MCP server (`https://mcp.ai.phase.xyz/mcp`, key from `PHASE_API_KEY`).
+
 ## Quick start
 
 ```bash

@@ -1,0 +1,10 @@
+{
+  "name": "phase-router",
+  "version": "0.1.0",
+  "description": "Phase Router for Claude Code: a skill for calling ~370 models through one OpenAI-compatible API (price of each call in the answer, signed receipt, x402 pay-per-request) and the Phase Router remote MCP server.",
+  "author": { "name": "Phase", "email": "ai@phase.xyz", "url": "https://router.phase.xyz" },
+  "homepage": "https://router.phase.xyz",
+  "repository": "https://github.com/devcells/phase-router-skills",
+  "license": "MIT",
+  "keywords": ["llm", "router", "openai-compatible", "mcp", "x402", "models"]
+}

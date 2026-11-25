@@ -1,0 +1,15 @@
+{
+  "name": "phase-router",
+  "owner": { "name": "Phase", "email": "ai@phase.xyz" },
+  "metadata": { "description": "Phase Router plugins for Claude Code" },
+  "plugins": [
+    {
+      "name": "phase-router",
+      "source": "./",
+      "description": "Skill and remote MCP server for Phase Router: ~370 models through one OpenAI-compatible API, the price of each call in the answer, a signed receipt, x402 pay-per-request.",
+      "version": "0.1.0",
+      "category": "development",
+      "homepage": "https://router.phase.xyz"
+    }
+  ]
+}

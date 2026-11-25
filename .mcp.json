@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "phase-router": {
+      "type": "http",
+      "url": "https://mcp.ai.phase.xyz/mcp",
+      "headers": { "Authorization": "Bearer ${PHASE_API_KEY}" }
+    }
+  }
+}
